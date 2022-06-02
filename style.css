@@ -1,0 +1,118 @@
+:root {
+  --main-font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bg-color: #f5f5f5;
+  --dark-text: #262626;
+  --light-text: #fafafa;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --shadow-color: rgba(0, 0, 0, 0.33);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font-family);
+  color: var(--dark-text);
+}
+
+/* GENERAL */
+h1 {
+  font-size: 2.4rem; 
+  font-weight: 900;
+  color: var(--slate-800);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--slate-200);
+}
+
+#container {
+  position: relative; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER + DROP-DOWN */
+header {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+header > h1 {
+  align-self: center;
+}
+
+.drop-down-icon {
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-down-menu {
+  display: none;
+  transition: all 1000ms ease-in-out;
+}
+
+.drop-down-menu > ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.drop-item {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.drop-item > h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--slate-300);
+}
+
+.drop-item > h3:hover {
+  background-color: var(--slate-400);
+}
+
+.colors-list,
+.tech-list,
+.credits-list {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  text-align: center;
+  list-style: none;
+  line-height: 2rem;
+}
